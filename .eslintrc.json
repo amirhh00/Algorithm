@@ -1,0 +1,32 @@
+{
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "@kalimahapps/eslint-plugin-tailwind"
+  ],
+  "rules": {
+    "prefer-const": "error",
+    "@typescript-eslint/ban-ts-comment": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-non-null-assertion": 0,
+    "@typescript-eslint/no-unused-vars": 0,
+    "@kalimahapps/tailwind/sort": "warn",
+    "max-len": [
+      "warn",
+      {
+        "code": 120
+      }
+    ],
+    "@kalimahapps/tailwind/multiline": [
+      "warn",
+      {
+        "maxLen": 120,
+        "quotesOnNewLine": true
+      }
+    ]
+  }
+}

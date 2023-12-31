@@ -31,6 +31,36 @@
       "request": "attach",
       "url": "ws://localhost:3000/",
       "stopOnEntry": false
-    }
+    },
+    {
+      "name": "Deno",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "deno",
+      "runtimeArgs": ["run", "--inspect-brk", "-A", "<entry_point>"],
+      "port": 3000
+      },
+      {
+        "name": "Launch Deno",
+        "request": "launch",
+        "type": "node",
+        "program": "${file}",
+        "cwd": "${workspaceFolder}",
+        "runtimeExecutable": "deno",
+        "runtimeArgs": [
+          "run",
+          "--inspect-brk",
+          "--allow-all"
+        ],
+        "attachSimplePort": 9229
+      },
+      {
+        "name": "Python: Current File (Integrated Terminal)",
+        "type": "python",
+        "request": "launch",
+        "program": "${file}",
+        "console": "integratedTerminal"
+      },
   ]
 }
